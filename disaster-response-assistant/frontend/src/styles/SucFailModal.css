@@ -1,0 +1,138 @@
+/* SucFailModal.css */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-modal.export-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2000;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+  min-width: 320px;
+  max-width: 90vw;
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: modalPop 0.3s;
+}
+
+@keyframes modalPop {
+  0% {
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Icon container for SVGs */
+.icon-container {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  margin-top: -24px;
+}
+
+/* Success and Fail Animations */
+.succes-animation {
+  animation: popSuccess 0.5s;
+}
+.danger-animation {
+  animation: popDanger 0.5s;
+}
+@keyframes popSuccess {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.6;
+  }
+  80% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes popDanger {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.6;
+  }
+  80% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.content {
+  text-align: center;
+}
+.type {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+.message-type {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.custom-modal.export-modal.hide {
+  animation: modalFadeOut 0.3s forwards;
+}
+@keyframes modalFadeOut {
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 9px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #ef4444;
+}
+
+@media (max-width: 480px) {
+  .custom-modal.export-modal {
+    min-width: 90vw;
+    padding: 18px 8px 16px 8px;
+  }
+}

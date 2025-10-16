@@ -1,0 +1,501 @@
+/* Dashboard.css */
+
+.dashboard-bg {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #111827;
+}
+
+.dashboard-nav {
+  background: #374785;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.back-button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.back-button svg {
+  width: 24px;
+  height: 24px;
+  stroke: #ffffff;
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  line-height: 1;
+}
+
+.nav-status {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.nav-chip {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-chip.severe {
+  background: #b91c1c;
+  color: #fff;
+  font-weight: 600;
+}
+
+.dashboard-main {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Sidebar (Filters) */
+.dashboard-sidebar {
+  background: #fff;
+  flex: 0.5;
+  min-width: 300px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  overflow-y: auto;
+  border-right: 1px solid #eef2f9;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1rem 0;
+}
+
+.sidebar-section label {
+  font-weight: 500;
+  color: #374151;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.sidebar-section select,
+.sidebar-section input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  background: #fff;
+  font-family: inherit;
+}
+
+.sidebar-section input::placeholder,
+.sidebar-section select {
+  color: #9ca3af;
+}
+
+.sidebar-section input[readonly] {
+  background-color: #f3f4f6;
+  font-weight: 500;
+}
+
+/* Map Area */
+.dashboard-map {
+  flex: 2;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+}
+
+/* Export Button */
+.export-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 18px !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+  transition: background 0.18s;
+  gap: 7px;
+  min-height: 38px !important;
+  line-height: 1.2;
+}
+
+.export-btn:hover {
+  background: #1d4ed8;
+}
+
+.dashboard-sidebar .export-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.export-btn svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.map-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.map-location {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.map-wrapper {
+  flex-grow: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+/* Risk Legend */
+.risk-legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  width: 220px;
+  transition: box-shadow 0.2s;
+}
+
+.risk-legend h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.risk-legend .legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.risk-legend .legend-item:last-child {
+  margin-bottom: 0;
+}
+
+.risk-legend .dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 12px;
+  flex-shrink: 0;
+  border: 2px solid #fff;
+}
+
+.risk-legend .legend-label {
+  flex-grow: 1;
+  color: #374151;
+}
+
+.risk-legend .legend-count {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.dot.high {
+  background: #b91c1c;
+  border: 2px solid #fff;
+}
+.dot.medium {
+  background: #eb6600;
+  border: 2px solid #fff;
+}
+.dot.low {
+  background: #059669;
+  border: 2px solid #fff;
+}
+
+/* Legend Minimize Button */
+.legend-minimize-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #666;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+/* Legend Chip (minimized) */
+.legend-chip {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #ffffff;
+  color: #22223b;
+  border-radius: 12px;
+  padding: 10px 32px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  z-index: 1001;
+  text-align: center;
+  letter-spacing: 0.5px;
+  border: none;
+  border: 1px solid #e5e7eb;
+  transition: box-shadow 0.2s;
+  user-select: none;
+}
+
+/* Risk Assessment Panel */
+.dashboard-risk {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  width: 475px;
+  max-height: 1000px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f3f4f6;
+}
+
+.risk-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1741a6;
+  margin: 0 0 1.5rem 0;
+}
+
+.risk-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.risk-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1.25rem;
+  background: #f9fafb;
+}
+
+.risk-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.risk-area-icon-name {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.risk-area-icon-name svg {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  vertical-align: middle;
+}
+
+.risk-area {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.risk-desc {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+.risk-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+  align-items: center;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.risk-hazard-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  gap: 8px;
+}
+
+.risk-hazard-label {
+  font-weight: 500;
+  color: #2563eb;
+  margin-right: 6px;
+}
+
+.risk-hazard-value {
+  font-weight: 500;
+  color: #111827;
+}
+
+.risk-level-pill-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.risk-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #fff;
+  background: #888;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+}
+
+.risk-pill.high {
+  background: #b91c1c;
+  border: 2px solid #fff;
+}
+
+.risk-pill.medium {
+  background: #eb6600;
+  border: 2px solid #fff;
+}
+
+.risk-pill.low {
+  background: #059669;
+  border: 2px solid #fff;
+}
+
+.risk-placeholder {
+  font-size: 1rem;
+  color: #6b7280;
+  padding: 2rem 1rem;
+  text-align: center;
+  background: #f3f4f6;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.ant-select-item-option-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.ant-select-item-option-content svg {
+  margin-right: 8px;
+  margin-left: 0;
+  min-width: 20px;
+}
+
+.ant-select-selection-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.ant-select-selection-item svg {
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+.risk-level-label {
+  font-weight: 500;
+  color: #374151;
+  margin-right: 7px;
+  font-size: 0.95em;
+}
+
+.risk-city-name {
+  font-weight: 700;
+  color: #111827;
+  font-size: 1.3rem;
+}
+
+.map-label {
+  color: #111827;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 3px #fff, 0 0 2px #000;
+}
+
+.hazard-select .ant-select-selector,
+.export-select .ant-select-selector,
+.hazard-select .ant-select-selection-item,
+.export-select .ant-select-selection-item {
+  color: #222 !important;
+  font-weight: 600;
+}
