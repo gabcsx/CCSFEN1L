@@ -16,6 +16,8 @@ You can explore the data, models, and experiments in the notebook before running
 - [Disaster Response Assistant with Predictive Analytics for Risk Management (NCR-Focused)](#disaster-response-assistant-with-predictive-analytics-for-risk-management-ncr-focused)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
+    - [Limitations](#limitations)
+    - [Future Improvements](#future-improvements)
   - [Features](#features)
   - [Screenshots](#screenshots)
   - [Tech Stack](#tech-stack)
@@ -36,15 +38,21 @@ You can explore the data, models, and experiments in the notebook before running
 
 ## Description
 
-Disaster risk management is crucial for public safety, especially in disaster-prone regions like the Philippines. This project empowers local government units (LGUs), emergency responders, and researchers with a web-based assistant that leverages machine learning to predict and visualize risk zones for hazards such as floods, typhoons, and earthquakes.
+Disaster risk management is crucial for public safety, especially in disaster-prone regions like the Philippines. This project specifically focuses on the National Capital Region (NCR), providing local government units (LGUs), emergency responders, and researchers with a web-based assistant that leverages machine learning to predict and visualize risk zones for hazards such as floods, typhoons, and earthquakes within NCR.
 
-Unlike traditional monitoring tools, this assistant focuses on **predictive analytics**—classifying areas into high, medium, or low risk using historical data (e.g., rainfall, population density, elevation) and clustering algorithms. The system features an interactive map dashboard, safety recommendations, and exportable reports to support proactive disaster planning and resource allocation.
+Unlike traditional monitoring tools, this assistant emphasizes predictive analytics—classifying areas into high, medium, or low risk using historical data and clustering algorithms. The system features an interactive map dashboard, safety recommendations, and exportable reports to support proactive disaster planning and resource allocation.
+
+### Limitations
+Currently, the project is limited to NCR and may not cover all hazard types or provide real-time data for every location. Some features and data integrations are still in development.
+
+### Future Improvements
+Expansion to other regions, inclusion of additional hazard types, and enhanced real-time data integration are planned for future releases.
 
 ---
 
 ## Features
 
-- **Data Integration:** Import historical disaster data from reliable sources (e.g., PAGASA, PHIVOLCS, Project NOAH).
+- **Data Integration:** Import historical disaster data from reliable sources (e.g., PAGASA, PHIVOLCS, Project NOAH), and real-time weather data from [WeatherAPI.com](https://www.weatherapi.com/).
 - **Predictive Risk Analysis:** Classify geographic areas into risk categories using machine learning models.
 - **Interactive Map Dashboard:** Visualize risk zones with color-coded maps and hazard overlays.
 - **Safety Recommendations:** Generate tailored guidelines and alerts based on predicted risk levels.
@@ -101,6 +109,7 @@ Unlike traditional monitoring tools, this assistant focuses on **predictive anal
 - Data Storage: CSV
 - Report Generation: FPDF (PDF), pandas (Excel)
 - CORS for frontend-backend communication
+- WeatherAPI.com (Real-time weather data integration)
 
 **Other Tools:**
 - Git (Version Control)
@@ -186,6 +195,7 @@ curl "http://localhost:5000/api/risk-data?city=Manila"
 - [PHIVOLCS](https://www.phivolcs.dost.gov.ph/)
 - [Project NOAH](https://noah.up.edu.ph/)
 - [HazardHunterPH](https://hazardhunter.georisk.gov.ph/)
+- [WeatherAPI.com] (https://www.weatherapi.com/)
 - [Scikit-learn](https://scikit-learn.org/stable/)
 - [Leaflet.js](https://leafletjs.com/)
 - [Ant Design](https://ant.design/)
