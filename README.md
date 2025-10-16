@@ -195,7 +195,7 @@ curl "http://localhost:5000/api/risk-data?city=Manila"
 - [PHIVOLCS](https://www.phivolcs.dost.gov.ph/)
 - [Project NOAH](https://noah.up.edu.ph/)
 - [HazardHunterPH](https://hazardhunter.georisk.gov.ph/)
-- [WeatherAPI.com] (https://www.weatherapi.com/)
+- [WeatherAPI.com](https://www.weatherapi.com/)
 - [Scikit-learn](https://scikit-learn.org/stable/)
 - [Leaflet.js](https://leafletjs.com/)
 - [Ant Design](https://ant.design/)
