@@ -49,7 +49,7 @@ export default function AboutModal({ open, onClose }) {
           {/* Contact information */}
           <p>
             Contact:{" "}
-            <a href="mailto:MARBELLS_IDRD@gmail.com">MARBELLS_IDRD@gmail.com</a>
+            <a href="mailto:MARBELLS.IDRD@gmail.com">MARBELLS.IDRD@gmail.com</a>
           </p>
         </div>
         <div className="modal-footer">
