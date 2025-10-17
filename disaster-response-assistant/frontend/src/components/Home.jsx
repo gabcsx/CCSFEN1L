@@ -142,7 +142,7 @@ export default function Home() {
               {/* Evacuation Centers */}
               <div>
                 <a
-                  href="https://www.facebook.com/photo?fbid=1133267292320391&set=a.162290446084752"
+                  href="https://scontent.fmnl22-1.fna.fbcdn.net/v/t39.30808-6/553542779_1133267295653724_3730638163108697289_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=uKPbBN1gXLgQ7kNvwG_3alB&_nc_oc=Adna8TDEoS8kMfeUC2M8jLGbjx7yzc1hhpqKxDCAv7d_KZmRCzqbR38XaEQuuStEUyE&_nc_zt=23&_nc_ht=scontent.fmnl22-1.fna&_nc_gid=gI2jXpsdMK8qV4Z4yKY9eQ&oh=00_Afd71QnxJ8UlwKvkXYj3L48RdCmVYepZ4n4AlcSbL1CTbw&oe=68F84226"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="green status-link"
